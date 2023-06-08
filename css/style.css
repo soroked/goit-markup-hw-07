@@ -48,16 +48,17 @@ img {
 
 /*************** COMPONENTS ***************/
 
+@media screen and (max-width: 1157px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
-}
-
-.container {
-  padding-left: 16px;
-  padding-right: 16px;
-  /* width: 1158px; */
 }
 
 @media screen and (min-width: 428px) {
@@ -74,9 +75,11 @@ body {
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1158px) {
   .container {
-    width: 1160px;
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -244,6 +247,10 @@ body {
   &:focus {
     color: #404bbf;
   }
+
+  &.current-mobil {
+    color: #404bbf;
+  }
 }
 
 .mobile-contact-list {
@@ -297,7 +304,7 @@ body {
   fill: #f4f4fd;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1159px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .page-header {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -404,7 +411,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1158px) {
   .page-nav {
     display: flex;
     align-items: center;
@@ -472,7 +479,7 @@ body {
 }
 
 /* tablet */
-@media screen and (min-width: 768px) and (max-width: 1159px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .hero {
     max-width: 768px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -489,7 +496,7 @@ body {
 }
 
 /* desktop */
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1158px) {
   .hero {
     padding: 188px 0;
     max-width: 1440px;
@@ -532,7 +539,7 @@ body {
 
 /*============== ADVANTAGES ===============*/
 
-@media screen and (max-width: 1159px) {
+@media screen and (max-width: 1157px) {
   .advantages {
     padding: 96px 0;
   }
@@ -553,13 +560,15 @@ body {
     font-weight: 500;
     margin-top: 8px;
   }
+}
 
-  .advantages-item:not(:last-child) .section-text {
+@media screen and (max-width: 767px) {
+  .advantages-item:not(:last-child) {
     margin-bottom: 72px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1159px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .advantages-list {
     display: flex;
     flex-wrap: wrap;
@@ -577,7 +586,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1158px) {
   .advantages {
     padding: 120px 0;
   }
@@ -603,7 +612,7 @@ body {
   }
 
   .advantages-item.icon-antenna::before {
-    background-image: url(../images/advantages/antenna.svg);
+    background-image: url(../images/advantages/antenna\ 1.svg);
   }
 
   .advantages-item.icon-clock::before {
@@ -628,13 +637,13 @@ body {
 
 /*============== SERVICES ===============*/
 
-@media screen and (max-width: 1159px) {
+@media screen and (max-width: 1157px) {
   .services {
     display: none;
   }
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1158px) {
   .services {
     display: block;
     padding-bottom: 120px;
@@ -658,7 +667,7 @@ body {
 
 /*============== OUR TEAM ===============*/
 
-@media screen and (max-width: 1159px) {
+@media screen and (max-width: 1157px) {
   .our-team {
     padding-top: 96px;
     padding-bottom: 96px;
@@ -669,7 +678,7 @@ body {
   background-color: #f4f4fd;
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1158px) {
   .our-team {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -761,27 +770,27 @@ body {
 
 /*============== CUSTOMERS ===============*/
 
-@media screen and (max-width: 1159px) {
+@media screen and (max-width: 1157px) {
   .customers {
     padding-top: 96px;
     padding-bottom: 96px;
   }
 
   .customers-list {
-    width: 552px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-@media screen and (min-width: 1160px) {
-  .customers {
-    padding-top: 120px;
-    padding-bottom: 120px;
+@media screen and (max-width: 767px) {
+  .customers-list {
+    column-gap: 16px;
+    row-gap: 72px;
   }
 
-  .customers-list {
-    gap: 24px;
+  .customers-item {
+    width: 190px;
+    height: 88px;
   }
 }
 
@@ -797,35 +806,10 @@ body {
   color: #2e2f42;
 }
 
-@media screen and (max-width: 767px) {
-  .customers-list {
-    column-gap: 16px;
-    row-gap: 72px;
-  }
-
-  .customers-item {
-    width: 190px;
-    height: 88px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .customers-item {
-    width: 168px;
-    height: 88px;
-  }
-}
-
-@media screen and (min-width: 767px) and (max-width: 1159px) {
-  .customers-list {
-    column-gap: 24px;
-    row-gap: 72px;
-  }
-}
-
 .customers-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .customer-link {
@@ -854,13 +838,34 @@ body {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) {
+  .customers-item {
+    width: 168px;
+    height: 88px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .customers-list {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .customers-list {
+    gap: 24px;
+  }
+}
+
 /*============== /CUSTOMERS ===============*/
 
 /*============== FOOTER ===============*/
-
-.footer {
-  background-color: var(--footer-bg-color);
-}
 
 @media screen and (max-width: 767px) {
   .footer-desc {
@@ -880,11 +885,15 @@ body {
   }
 
   .footer-form-input {
-    width: 398px;
+    width: 100%;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1159px) {
+.footer {
+  background-color: var(--footer-bg-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .footer .container {
     padding-left: 108px;
   }
@@ -892,14 +901,9 @@ body {
   .footer-subsection {
     gap: 24px;
   }
-
-  /* .footer {
-    padding-left: 108px;
-    padding-right: 108px;
-  } */
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1158px) {
   .footer .container {
     display: flex;
   }
@@ -985,7 +989,7 @@ body {
   fill: #f4f4fd;
 }
 
-@media screen and (max-width: 1159px) {
+@media screen and (max-width: 1157px) {
   .footer {
     padding-top: 96px;
     padding-bottom: 96px;
