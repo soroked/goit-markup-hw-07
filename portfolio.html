@@ -30,27 +30,101 @@
           <a class="logo link" href="./index.html">
             Web<span class="secondary-text-color">Studio</span>
           </a>
-
           <ul class="nav list">
-            <li><a class="nav-item link" href="./index.html">Studio</a></li>
-            <li><a class="nav-item current link" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="nav-item link" href="">Contacts</a></li>
+            <li class="list-item">
+              <a class="nav-item link" href="./index.html">Studio</a>
+            </li>
+            <li class="list-item">
+              <a class="nav-item current link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="list-item"><a class="nav-item link" href="">Contacts</a></li>
           </ul>
         </nav>
+        <!-- mobile menu button -->
+        <button
+          class="mobile-menu-open-btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
 
         <!-- contacts -->
         <address class="nav-contact">
           <ul class="contact-list list">
-            <li>
+            <li class="list-item">
               <a class="nav-contact-item link" href="mailto:info@devstudio.com">
                 info@devstudio.com
               </a>
             </li>
-            <li>
+            <li class="list-item">
               <a class="nav-contact-item link" href="tel:+110001111111">+11 (000) 111-11-11</a>
             </li>
           </ul>
         </address>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="container">
+          <button class="mobile-menu-close-btn js-close-menu" type="button">
+            <svg class="mobile-menu-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-mobile-menu-close-btn"></use>
+            </svg>
+          </button>
+          <ul class="mobile-nav list">
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link link" href="./index.html">Studio</a>
+            </li>
+            <li class="mobile-nav-item">
+              <a class="mobile-nav-link current-mobil link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="mobile-nav-item"><a class="mobile-nav-link link" href="#">Contacts</a></li>
+          </ul>
+          <div>
+            <ul class="mobile-contact-list list">
+              <li class="mobile-contact-item">
+                <a class="mobile-contact-tel link" href="tel:+110001111111"> +11 (000) 111-11-11</a>
+              </li>
+              <li class="mobile-contact-item">
+                <a class="mobile-contact-mail link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mobile-menu-social-links list">
+              <li class="mobile-menu-sl-item">
+                <a href="" class="mobile-menu-social-link"
+                  ><svg width="24" height="24" class="mobile-menu-sl-icon">
+                    <use href="./images/icons.svg#icon-mobile-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-menu-sl-item">
+                <a href="" class="mobile-menu-social-link"
+                  ><svg width="24" height="24" class="mobile-menu-sl-icon">
+                    <use href="./images/icons.svg#icon-mobile-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-menu-sl-item">
+                <a href="" class="mobile-menu-social-link"
+                  ><svg width="24" height="24" class="mobile-menu-sl-icon">
+                    <use href="./images/icons.svg#icon-mobile-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mobile-menu-sl-item">
+                <a href="" class="mobile-menu-social-link"
+                  ><svg width="24" height="24" class="mobile-menu-sl-icon">
+                    <use href="./images/icons.svg#icon-mobile-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -60,11 +134,11 @@
         <div class="container">
           <h1 hidden>Portfolio</h1>
           <ul class="filters list">
-            <li><button class="button button-portfolio" type="button">All</button></li>
-            <li><button class="button button-portfolio" type="button">Web Site</button></li>
-            <li><button class="button button-portfolio" type="button">App</button></li>
-            <li><button class="button button-portfolio" type="button">Design</button></li>
-            <li><button class="button button-portfolio" type="button">Marketing</button></li>
+            <li><button class="button-portfolio" type="button">All</button></li>
+            <li><button class="button-portfolio" type="button">Web Site</button></li>
+            <li><button class="button-portfolio" type="button">App</button></li>
+            <li><button class="button-portfolio" type="button">Design</button></li>
+            <li><button class="button-portfolio" type="button">Marketing</button></li>
           </ul>
 
           <!-- menu list -->
@@ -212,47 +286,49 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-desc">
-          <a class="logo link" href="./index.html">
-            Web<span class="footer-studio-color">Studio</span>
-          </a>
-          <p class="footer-text">
-            Increase the flow of customers and sales for your business with digital marketing &
-            growth solutions.
-          </p>
-        </div>
-        <div>
-          <p class="footer-second-text">Social media</p>
-          <ul class="footer-links list">
-            <li class="footer-links-item">
-              <a href="" class="footer-link"
-                ><svg width="24" height="24" class="footer-icon">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-links-item">
-              <a href="" class="footer-link"
-                ><svg width="24" height="24" class="footer-icon">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-links-item">
-              <a href="" class="footer-link"
-                ><svg width="24" height="24" class="footer-icon">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-links-item">
-              <a href="" class="footer-link"
-                ><svg width="24" height="24" class="footer-icon">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer-subsection">
+          <div class="footer-desc">
+            <a class="logo link" href="./index.html">
+              Web<span class="footer-studio-color">Studio</span>
+            </a>
+            <p class="footer-text">
+              Increase the flow of customers and sales for your business with digital marketing &
+              growth solutions.
+            </p>
+          </div>
+          <div class="footer-social">
+            <p class="footer-second-text">Social media</p>
+            <ul class="footer-links list">
+              <li class="footer-links-item">
+                <a href="" class="footer-link"
+                  ><svg width="24" height="24" class="footer-icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-links-item">
+                <a href="" class="footer-link"
+                  ><svg width="24" height="24" class="footer-icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-links-item">
+                <a href="" class="footer-link"
+                  ><svg width="24" height="24" class="footer-icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-links-item">
+                <a href="" class="footer-link"
+                  ><svg width="24" height="24" class="footer-icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="form-container">
           <p class="footer-second-text">Subscribe</p>
@@ -275,5 +351,12 @@
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
