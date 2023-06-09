@@ -36,6 +36,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -278,6 +280,13 @@ body {
   gap: 56px;
 }
 
+@media screen and (max-width: 389px) {
+  .mobile-menu-social-links {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
 .mobile-menu-sl-item {
   width: 40px;
   height: 40px;
@@ -496,6 +505,18 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (max-width: 1157px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (max-width: 1157px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../images/hero/people-office-tablet@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+}
+
 /* tablet and desktop */
 @media screen and (min-width: 768px) {
   .hero-title {
@@ -512,6 +533,15 @@ body {
 
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url('../images/hero/people-office.jpg');
+  }
+}
+
+@media screen and (min-width: 1158px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1158px) and (min-resolution: 192dpi),
+  screen and (min-width: 1158px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../images/hero/people-office@2x.jpg');
   }
 }
 
@@ -704,7 +734,7 @@ body {
 }
 
 .our-team-item {
-  width: 264px;
+  max-width: 264px;
 
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
@@ -1286,16 +1316,29 @@ body {
 
 /*================= PORTFOLIO =================*/
 
-@media screen and (max-width: 767px) {
-  .filters {
-    width: 300px;
+@media screen and (max-width: 1157px) {
+  .project-card-overlay {
+    display: none;
+  }
+}
 
-    margin-top: 48px;
+@media screen and (max-width: 767px) {
+  .portfolio {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .filters {
+    max-width: 300px;
     margin-bottom: 48px;
   }
 
   .button-portfolio {
     padding: 8px 16px;
+  }
+
+  .project-card:not(:last-child) {
+    margin-bottom: 48px;
   }
 }
 
@@ -1338,11 +1381,29 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.project-card {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.project-card > .link:hover,
+.project-card > .link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.card-info {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+.card-info .section-subtitle {
+  margin-bottom: 8px;
+}
+
 @media screen and (min-width: 768px) {
   .filters {
     justify-content: center;
-
-    margin-top: 64px;
     margin-bottom: 64px;
   }
 
@@ -1351,4 +1412,65 @@ body {
   }
 }
 
-/*================= PRTFOLIO =================*/
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .portfolio {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .projects.list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .portfolio {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  .projects.list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+
+  .project-card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 32px;
+    transform: translateY(100%);
+
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--footer-text-color);
+    background-color: #4d5ae5;
+    overflow: auto;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .project-card > .link:hover .project-card-overlay,
+  .project-card > .link:focus .project-card-overlay {
+    transform: translateY(0%);
+  }
+}
+
+/*================= /PORTFOLIO =================*/
